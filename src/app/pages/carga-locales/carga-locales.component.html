@@ -1,0 +1,24 @@
+<form class=carga [formGroup]="carga">
+    <mat-form-field class="full-width">
+        <mat-label>Nombre</mat-label>
+        <input matInput placeholder="ingrese nombre" required formControlName="nombre" >
+    </mat-form-field>
+    <br>
+    <mat-form-field class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="ingrese email" required formControlName="email" >
+    </mat-form-field>
+    <br>
+    <mat-form-field class="full-width">
+        <mat-label>Telefono</mat-label>
+        <input matInput placeholder="ingrese telefono" required formControlName="telefono" >
+    </mat-form-field>
+    <br>
+    <mat-form-field class="full-width">
+        <mat-label>Localidad</mat-label>
+        <input matInput placeholder="ingrese localidad" required formControlName="localidad" >
+    </mat-form-field>
+    <br>
+    <button mat-button color="primary" (click)="cargaBoton()">Cargar local</button>
+</form>
+

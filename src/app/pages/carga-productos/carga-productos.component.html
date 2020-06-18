@@ -1,0 +1,34 @@
+<form class=carga [formGroup]="carga">
+    <mat-form-field class="full-width">
+        <mat-label>Nombre</mat-label>
+        <input matInput placeholder="ingrese nombre" required formControlName="nombre" >
+    </mat-form-field>
+    <br>
+    <mat-form-field class="full-width">
+        <mat-label>Marca</mat-label>
+        <input matInput placeholder="ingrese marca" required formControlName="marca" >
+    </mat-form-field>
+    <br>
+    <mat-form-field class="full-width">
+        <mat-label>Stock</mat-label>
+        <input matInput placeholder="ingrese stock" required formControlName="stock" >
+    </mat-form-field>
+    <br>
+    <mat-form-field class="full-width">
+        <mat-label>Tipo</mat-label>
+        <input matInput placeholder="ingrese tipo" required formControlName="tipo" >
+    </mat-form-field>
+    <br>
+    <mat-form-field class="full-width">
+        <mat-label>Precio</mat-label>
+        <input matInput placeholder="ingrese precio" required formControlName="precio" >
+    </mat-form-field>
+    <br>
+    
+    <mat-radio-group aria-label="Elija un local" *ngFor="let item of locales" onChange={this.handleChange}>
+        <mat-radio-button>{{item.nombre}}</mat-radio-button >
+        <br>
+    </mat-radio-group>
+
+    <button mat-button color="primary" (click)="cargaBoton()">Cargar producto</button>
+</form>

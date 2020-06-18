@@ -1,0 +1,14 @@
+<form class=carga [formGroup]="login">
+    
+    <mat-form-field class="full-width">
+        <mat-label>email</mat-label>
+        <input matInput placeholder="ingrese email" required formControlName="email" >
+    </mat-form-field>
+    <br>
+    <mat-form-field class="full-width">
+        <input matInput placeholder="Clave" [type]="hide ? 'password' : 'text'" formControlName="clave" required>
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </mat-form-field>
+    <br>
+    <button mat-button color="primary" (click)="loginBoton()">Login</button>
+</form>
